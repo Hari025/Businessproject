@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "testapp/list.css" %}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<title>Product details</title>
+</head>
+
+<body>
+<h1>Order Details</h1>
+<form action="" method="POST">
+{% csrf_token %}
+<h3>Choose Products from the list</h3>
+  <select name="Productname">
+      <option value="empty"></option>
+      <option value="LAPTOP">Laptop</option>
+      <option value="TV">Tv</option>
+      <option value="MOBILE">Mobile</option>
+    </select>
+<h3>Price</h3>
+<textarea cols="100" rows="2" name="CostPrice">
+</textarea><br/>
+<h3>Choose country</h3>
+  <select name="Country">
+      <option value="empty"></option>
+      <option value="TEXAS">Texa</option>
+      <option value="EMEA">Emea</option>
+      <option value="APAC">Apac</option>
+    </select>
+
+  <h3>Order Date</h3>
+<input type="date" name="ORD_DATE"/><br>
+
+<h3>Oder Desc</h3>
+<textarea cols="100" rows="2" name="ORD_DESCRIPTION">
+</textarea><br/>
+<h3>Discount percent</h3>
+<select name="Discount">
+    <option value="empty"></option>
+    <option value="2">2%</option>
+    <option value="5">5 %</option>
+    <option value="7">7 %</option>
+  </select>
+
+<h3>Selling Price</h3>
+<textarea cols="100" rows="2" name="Sellingprice">
+</textarea><br><br>
+<input type="submit" value="Post"/>
+</form>
+</body>
+
+</html>
